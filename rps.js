@@ -1,14 +1,5 @@
-// RANDOM NUMBER GENERATOR function computerPlay (min, max){
-//  console.log(Math.floor(Math.random()*(max-min+1)+min));
-//}
 
-//computerPlay(1,3);
-
-//function playRound(playerSelection, computerSelection) {
-
-//}
-
-
+// WHAT I KIND OF THINK I HAVE TO DO
 // 1. Establish an array with the strings: 'rock', 'paper', 'scissors'
 // 2. Randomly select one item from the array
 // 3. Compare computerPlay vs playerSelection

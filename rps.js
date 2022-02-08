@@ -18,7 +18,7 @@
 
 
 // DECLARING HUMAN INPUT
-//let humanSelection = "rock";
+//let humanSelection = "rock"; << TESTING PURPOSES ONLY
 let greeting = "Choose rock, paper, or scissors.";
 let humanSelection = prompt(greeting);
 
@@ -31,7 +31,7 @@ function grabbingInput() {
   return prompt(greeting);
 }
 
-// DECLARING ARRAY AND COMPUTER'S CHOICE. LOGGING RESULT TO CONSOLE.
+// DECLARING ARRAY AND COMPUTER'S CHOICE. RANDOMIZING COMPUTER SELECTION. LOGGING RESULT TO CONSOLE.
 const myArray = ["rock", "paper", "scissors"];
 const computerSelection = myArray [Math.floor(Math.random() * myArray.length)];
 console.log("You selected: " + goodHumanSelection + ". The computer selected: " + computerSelection);

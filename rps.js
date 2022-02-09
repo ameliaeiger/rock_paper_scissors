@@ -21,7 +21,6 @@ window.onload = function() {
   document.getElementById("result").innerHTML = text;
 }
 // DECLARING HUMAN INPUT
-//let humanSelection = "rock"; << TESTING PURPOSES ONLY
 let greeting = "Choose rock, paper, or scissors.";
 let humanSelection = prompt(greeting);
 

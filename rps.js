@@ -42,30 +42,30 @@ console.log("You selected: " + goodHumanSelection + ". The computer selected: " 
 // DISPLAYS RESULTS STRING TO THE BROWSER
 let text = ("You selected: " + goodHumanSelection + ". The computer selected: " + computerSelection);
 
-//
-let winner = "Result: "
 
 // DECLARE FUNCTION TO COMPARE COMPUTER INPUT VS. HUMAN INPUT
 selectWinner(computerSelection, goodHumanSelection);
 function selectWinner(computerSelection, goodHumanSelection) {
-  // GIVE FALSE RESULT IF INPUT IS NOT CORRECT
+
+// GIVE FALSE RESULT IF INPUT IS NOT CORRECT
+
   if (goodHumanSelection != "rock" &&
     goodHumanSelection != "paper" &&
     goodHumanSelection != "scissors") {
     console.log("Result: you did it wrong");
-    document.getElementById("winner").innerHTML = winner + "you did it wrong";
+    document.getElementById("winner").innerHTML = "Result: you did it wrong";
   } else if (computerSelection == goodHumanSelection) {
     console.log("Result: tie");
-    document.getElementById("winner").innerHTML = winner + "tie";
+    document.getElementById("winner").innerHTML ="Result: tie";
   } else if (
     (computerSelection == "rock" && goodHumanSelection == "scissors") ||
     (computerSelection == "scissors" && goodHumanSelection == "paper") ||
     (computerSelection == "paper" && goodHumanSelection == "rock")
   ) {
     console.log("Result: you lose");
-    document.getElementById("winner").innerHTML = winner + "you lose";
+    document.getElementById("winner").innerHTML ="Result: you lose";
   } else {
     console.log("Result: you win");
-    document.getElementById("winner").innerHTML = winner + "you win";
+    document.getElementById("winner").innerHTML ="Result: you win";
   }
 }

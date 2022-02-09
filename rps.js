@@ -15,8 +15,11 @@
 // 6. Wrote comparisons of different outcomes. Those are nested.
 // *. Right now, the console will log the result.
 
-
-
+// For some reason, this has to be here first otherwise none of this works. Apparently
+// the element doesn't exist yet because it hasn't been added to the DOM? idk
+window.onload = function() {
+  document.getElementById("result").innerHTML = text;
+}
 // DECLARING HUMAN INPUT
 //let humanSelection = "rock"; << TESTING PURPOSES ONLY
 let greeting = "Choose rock, paper, or scissors.";
@@ -35,6 +38,9 @@ function grabbingInput() {
 const myArray = ["rock", "paper", "scissors"];
 const computerSelection = myArray [Math.floor(Math.random() * myArray.length)];
 console.log("You selected: " + goodHumanSelection + ". The computer selected: " + computerSelection);
+
+// DISPLAYS RESULTS STRING TO THE BROWSER
+let text = ("You selected: " + goodHumanSelection + ". The computer selected: " + computerSelection);
 
 // DECLARE FUNCTION TO COMPARE COMPUTER INPUT VS. HUMAN INPUT
 selectWinner(computerSelection, goodHumanSelection);

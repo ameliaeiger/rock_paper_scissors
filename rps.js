@@ -48,7 +48,13 @@ let winner = "Result: "
 // DECLARE FUNCTION TO COMPARE COMPUTER INPUT VS. HUMAN INPUT
 selectWinner(computerSelection, goodHumanSelection);
 function selectWinner(computerSelection, goodHumanSelection) {
-  if (computerSelection == goodHumanSelection) {
+  // GIVE FALSE RESULT IF INPUT IS NOT CORRECT
+  if (goodHumanSelection != "rock" &&
+    goodHumanSelection != "paper" &&
+    goodHumanSelection != "scissors") {
+    console.log("Result: you did it wrong");
+    document.getElementById("winner").innerHTML = winner + "you did it wrong";
+  } else if (computerSelection == goodHumanSelection) {
     console.log("Result: tie");
     document.getElementById("winner").innerHTML = winner + "tie";
   } else if (
@@ -57,7 +63,9 @@ function selectWinner(computerSelection, goodHumanSelection) {
     (computerSelection == "paper" && goodHumanSelection == "rock")
   ) {
     console.log("Result: you lose");
+    document.getElementById("winner").innerHTML = winner + "you lose";
   } else {
     console.log("Result: you win");
+    document.getElementById("winner").innerHTML = winner + "you win";
   }
 }

@@ -42,11 +42,15 @@ console.log("You selected: " + goodHumanSelection + ". The computer selected: " 
 // DISPLAYS RESULTS STRING TO THE BROWSER
 let text = ("You selected: " + goodHumanSelection + ". The computer selected: " + computerSelection);
 
+//
+let winner = "Result: "
+
 // DECLARE FUNCTION TO COMPARE COMPUTER INPUT VS. HUMAN INPUT
 selectWinner(computerSelection, goodHumanSelection);
 function selectWinner(computerSelection, goodHumanSelection) {
   if (computerSelection == goodHumanSelection) {
     console.log("Result: tie");
+    document.getElementById("winner").innerHTML = winner + "tie";
   } else if (
     (computerSelection == "rock" && goodHumanSelection == "scissors") ||
     (computerSelection == "scissors" && goodHumanSelection == "paper") ||
